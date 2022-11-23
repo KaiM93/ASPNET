@@ -63,6 +63,12 @@ namespace Testing.Controllers
 
             return RedirectToAction("index");
         }
+
+        public IActionResult DeleteProduct(Product product)
+        {
+            repo.DeleteProduct(product);
+            return RedirectToAction("Index");
+        }
     }
 }
 
